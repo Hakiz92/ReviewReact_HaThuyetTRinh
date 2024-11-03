@@ -32,10 +32,10 @@ const DangKy = ({ navigation }) => {
                 }
             } catch (error) {
                 console.error('Error:', error);
-                alert('Failed to register. Please try again.');
+                alert('Đăng kí không thành công, vui lòng thử lại.');
             }
         } else {
-            alert('Please fill all fields and agree to the terms.');
+            alert('Xin hãy điền vào các chỗ trống và đồng ý với các điều khoản.');
         }
     };
 

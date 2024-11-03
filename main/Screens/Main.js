@@ -49,7 +49,7 @@ export default function Main({ route, navigation }) {
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <Image source={require("../assets/baiTH4/logoicon.png")} style={{ width: 40, height: 40 }} />
                         <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#fff', borderRadius: 10, padding: 5 }}>
-                            <TextInput placeholder="Search here" style={{ flex: 1 }} />
+                            <TextInput placeholder="Search here" style={{ flex: 1, color: 'grey' }} />
                             <Image source={require('../assets/baiTH4/findicon.png')} style={{ borderRadius: 20 }} />
                         </View>
                     </View>
@@ -68,7 +68,7 @@ export default function Main({ route, navigation }) {
                 </View>
 
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', margin: 20 }}>
-                    <Text style={{ fontSize: 18 }}>Category</Text>
+                    <Text style={{ fontSize: 18, fontWeight: 300 }}>Category</Text>
                     <Image source={require("../assets/baiTH4/3gach.png")} style={{ width: 40, height: 40 }} />
                 </View>
 
@@ -108,13 +108,14 @@ export default function Main({ route, navigation }) {
                 </View>
 
                 <FlatList
-                    data={locationAPI}
+                    data={locationAPI.slice(3,5)}
                     renderItem={({ item }) => (
                         <View style={{ alignItems: 'center', padding: 5 }}>
                             <Image source={{ uri: item.image }} style={{ width: 170, height: 100, borderRadius: 10 }} />
                         </View>
                     )}
-                    numColumns={2}
+                    horizontal
+                    // numColumns={2}
                 />
             </ScrollView>
 
@@ -148,7 +149,7 @@ export default function Main({ route, navigation }) {
             >
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
                     <View style={{ width: 300, backgroundColor: 'white', borderRadius: 10, padding: 20 }}>
-                        <Text style={{ fontSize: 18, marginBottom: 20 }}>Bạn Muốn</Text>
+                        <Text style={{ fontSize: 18, marginBottom: 20 }}>Bạn muốn</Text>
                         {/* <Button title="Cập nhật" onPress={handleUpdate} /> */}
                         <Button title="Đăng xuất" onPress={handleLogout} />
                         <Button title="Hủy" onPress={() => setModalVisible(false)} />

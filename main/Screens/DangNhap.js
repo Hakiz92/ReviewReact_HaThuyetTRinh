@@ -53,8 +53,8 @@ const DangNhap = ({ navigation }) => {
 
             <View style={{ padding: 20 }}>
                 <View style={{ marginBottom: 40 }}>
-                    <Text style={{ fontSize: 30, fontWeight: '600', marginVertical: 10 }}>
-                        Welcome
+                    <Text style={{ fontSize: 40, fontWeight: '600', marginVertical: 10 }}>
+                        Welcome!
                     </Text>
                 </View>
 
@@ -97,7 +97,7 @@ const DangNhap = ({ navigation }) => {
                     }}
                 >
                     <Text style={{ color: 'white', textAlign: 'center' }}>
-                        You don't have an account? Sign Up Here
+                        Sign Up here please!
                     </Text>
                 </TouchableOpacity>
             </View>
